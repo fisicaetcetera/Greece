@@ -12,8 +12,7 @@ L.marker([ -5.7853, -35.3288
     .openPopup();
 	
 L.marker([45.81313, 15.97753]).addTo(map)
-    .bindPopup('ZAGREB  <BR> 2, 3, *4<BR>
-	      Igrejas e palácios góticos e barrocos e museu da cidade. Restante do dia livre.')
+    .bindPopup('ZAGREB  <BR> 2, 3, *4<BR>')
     .openPopup();	
 	
 L.marker([43.508133, 16.440193]).addTo(map)
