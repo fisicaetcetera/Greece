@@ -13,9 +13,7 @@ L.marker([ -5.7853, -35.3288
 	
 L.marker([45.81313, 15.97753]).addTo(map)
     .bindPopup('ZAGREB  <BR> 2, 3, *4<BR>
-	      Apreciaremos as belas igrejas e os
-palácios góticos e barrocos, como a Catedral de Santo Estevão, a Igreja de São Marcos e o
-Convento de Santa Clara, sede do Museu da cidade. Restante do dia livre.')
+	      Igrejas e palácios góticos e barrocos e museu da cidade. Restante do dia livre.')
     .openPopup();	
 	
 L.marker([43.508133, 16.440193]).addTo(map)
