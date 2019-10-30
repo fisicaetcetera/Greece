@@ -6,6 +6,11 @@ function setup() {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+	L.marker([37.97945, 23.71622]).addTo(map)
+    .bindPopup('SÃO GONÇALO  <BR> dia 1)
+    .openPopup();
+	
+
 L.marker([37.97945, 23.71622]).addTo(map)
     .bindPopup('ATENAS  <BR> 9*, 10, *11')
     .openPopup();
