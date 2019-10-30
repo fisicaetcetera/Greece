@@ -8,7 +8,7 @@ function setup() {
 
 	L.marker([ -5.7853, -35.3288
 ]).addTo(map)
-    .bindPopup('SÃO GONÇALO  <BR> dia 1)
+    .bindPopup('SÃO GONÇALO  <BR> dia 1')
     .openPopup();
 	
 
