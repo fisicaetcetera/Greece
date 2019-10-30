@@ -17,8 +17,7 @@ Dia 2 - Zagreb
 Chegada à bela capital da Croácia. Zagreb é a maior cidade do país, uma metrópole que soube
 conservar o espírito de épocas passadas e, ao mesmo tempo, incorporar as comodidades da
 vida moderna. Traslado para o hotel.<br>
-Dia 3 – Zagreb<br>
-Café da manhã buffet. City Zagreb que está sentada sobre as cidades de Gradec e Kaptol.
+Dia 3 – Zagreb<br>Café da manhã buffet. City Zagreb que está sentada sobre as cidades de Gradec e Kaptol.
 Gradec, ou Gornji Grad, antigo povoado real, foi fortificada contra os ataques dos tártaros no
 século XIII e ainda conserva algumas de suas muralhas e pórticos medievais. Em Kaptol, antigo
 assentamento religioso, destaca-se o Palácio Episcopal. Apreciaremos as belas igrejas e os
