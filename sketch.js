@@ -6,7 +6,8 @@ function setup() {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-	L.marker([37.97945, 23.71622]).addTo(map)
+	L.marker([ -5.7853, -35.3288
+]).addTo(map)
     .bindPopup('SÃO GONÇALO  <BR> dia 1)
     .openPopup();
 	
