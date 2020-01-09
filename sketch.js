@@ -19,8 +19,7 @@ L.marker([ 52.370216, 4.895168]).addTo(map)
     .openPopup();		
 
 L.marker([37.97945, 23.71622]).addTo(map)
-    .bindPopup('ATENAS  <BR> dia 16: passeio pela manhã <BR>
-	       e tarde livre')
+    .bindPopup('ATENAS  <BR> dia 16: passeio pela manhã <BR> e tarde livre')
     .openPopup();
 
 L.marker([37.44529, 25.32872]).addTo(map)
