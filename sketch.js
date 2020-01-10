@@ -1,6 +1,6 @@
 function setup() { 
   noCanvas();
-  var map = L.map('mapid').setView([35, 25], 2);
+  var map = L.map('mapid').setView([35, 25], 4);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
