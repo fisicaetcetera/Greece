@@ -1,5 +1,6 @@
 var imageUrl;
-let imagem;
+var bounds;
+var imageOverlay;
 let parthenonlat = 37.97025; 
 let parthenonlong = 23.72247;
 let acropolislat  = 37.96855;
@@ -14,12 +15,12 @@ function setup() {
  //Paternon 
     imageUrl = ['./parthenon.jpg'];
 
-    var bounds = L.latLngBounds([
+    bounds = L.latLngBounds([
       [parthenonlat, parthenonlong],
       [parthenonlat+0.01, parthenonlong+0.02]
     ]);
 
-    var imageOverlay = L.imageOverlay( imageUrl, bounds, {
+    imageOverlay = L.imageOverlay( imageUrl, bounds, {
         opacity: 0.3
     }).addTo(map);
 
