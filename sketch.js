@@ -1,10 +1,11 @@
 var imageUrl;
-var bounds;
-var imageOverlay;
+let imagem;
 let parthenonlat = 37.97025; 
 let parthenonlong = 23.72247;
 let acropolislat  = 37.96855;
 let acropolislong = 23.72848;
+let mikonoslat = 37.44529;
+let mikonoslong = 25.32872;
 
 
 let opacity = 1.0;
@@ -15,12 +16,12 @@ function setup() {
  //Paternon 
     imageUrl = ['./parthenon.jpg'];
 
-    bounds = L.latLngBounds([
+    var bounds = L.latLngBounds([
       [parthenonlat, parthenonlong],
       [parthenonlat+0.01, parthenonlong+0.02]
     ]);
 
-    imageOverlay = L.imageOverlay( imageUrl, bounds, {
+    var imageOverlay = L.imageOverlay( imageUrl, bounds, {
         opacity: 0.3
     }).addTo(map);
 
@@ -55,6 +56,8 @@ function setup() {
   L.marker([52.370216, 4.895168]).addTo(map)
     .bindPopup('AMSTERDAM  <BR> dia 15 12:20')
     .openPopup();
+  
+  //ATENAS
 
   L.marker([37.97945, 23.71622]).addTo(map)
     .bindPopup('ATENAS  <BR> dia 16: passeio pela manhã <BR> e tarde livre')
@@ -67,10 +70,34 @@ function setup() {
    L.marker([ acropolislat, acropolislong]).addTo(map)
     .bindPopup('MUSEU DE ACRÓPOLIS')
     .openPopup();
+  
+  //MIKONOS
 
-  L.marker([37.44529, 25.32872]).addTo(map)
+  L.marker([ mikonoslat, mikonoslong]).addTo(map)
     .bindPopup('MIKONOS<BR> dias 18 e 19')
     .openPopup();
+  
+  // Imagens - Mikonos
+  
+    //Mykonos windmills
+  
+    L.marker([ 37.44445, 25.32595]).addTo(map)
+    .bindPopup('MOINHOS DE VENTO')
+    .openPopup();
+  
+    imageUrl = ['./Mykonos.jpg'];
+    bounds = L.latLngBounds([
+      [ 37.44445, 25.32595],
+      [37.44445-0.008, 25.32595-0.008]
+    ]);
+
+    imageOverlay = L.imageOverlay( imageUrl, bounds, {
+        opacity: 0.3
+    }).addTo(map);
+
+
+  
+  //SANTORINI
 
   L.marker([36.393154, 25.461510]).addTo(map)
     .bindPopup('SANTORINI<BR> dias 21 e 22')
