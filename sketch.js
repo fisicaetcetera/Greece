@@ -12,7 +12,7 @@ function setup() {
   noCanvas();
   var map = L.map('mapid').setView([37.97945, 23.71622], 2);
  //Paternon 
-    var imageUrl = ['./parthenon.jpg'];
+    imageUrl = ['./parthenon.jpg'];
 
     var bounds = L.latLngBounds([
       [parthenonlat, parthenonlong],
@@ -25,14 +25,14 @@ function setup() {
 
  // Museu de Acrópolis
   
-    var imageUrl = ['./acropolis.jpg'];
+    imageUrl = ['./acropolis.jpg'];
 
-    var bounds = L.latLngBounds([
+    bounds = L.latLngBounds([
       [ acropolislat, acropolislong],
       [ acropolislat-0.005, acropolislong-0.0052]
     ]);
 
-    var imageOverlay = L.imageOverlay( imageUrl, bounds, {
+    imageOverlay = L.imageOverlay( imageUrl, bounds, {
         opacity: 0.5
     }).addTo(map);
 
