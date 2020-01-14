@@ -1,46 +1,21 @@
 var imageUrl;
-let imagem;
 let parthenonlat = 37.97025; 
 let parthenonlong = 23.72247;
 let acropolislat  = 37.96855;
 let acropolislong = 23.72848;
 let mikonoslat = 37.44529;
 let mikonoslong = 25.32872;
-
-
-let opacity = 1.0;
+let knossoslat = 35.298840;
+let knossoslong = 25.160721;
+let vinhoslat = 36.3764718274;
+let vinhoslong = 25.4430365612; 
+let museuHerakliolat = 35.3370; 
+let museuHerakliolong = 25.1357;
 
 function setup() {
   noCanvas();
-  var map = L.map('mapid').setView([37.97945, 23.71622], 2);
- //Paternon 
-    imageUrl = ['./parthenon.jpg'];
-
-    var bounds = L.latLngBounds([
-      [parthenonlat, parthenonlong],
-      [parthenonlat+0.01, parthenonlong+0.02]
-    ]);
-
-    var imageOverlay = L.imageOverlay( imageUrl, bounds, {
-        opacity: 0.3
-    }).addTo(map);
-
- // Museu de Acrópolis
-  
-    imageUrl = ['./acropolis.jpg'];
-
-    bounds = L.latLngBounds([
-      [ acropolislat, acropolislong],
-      [ acropolislat-0.005, acropolislong-0.0052]
-    ]);
-
-    imageOverlay = L.imageOverlay( imageUrl, bounds, {
-        opacity: 0.5
-    }).addTo(map);
-
-
-  
-  
+  var map = L.map('mapid').setView([37.97945, 23.71622], 3);
+   
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
@@ -63,37 +38,54 @@ function setup() {
     .bindPopup('ATENAS  <BR> dia 16: passeio pela manhã <BR> e tarde livre')
     .openPopup();
   
-   L.marker([parthenonlat, parthenonlong]).addTo(map)
-    .bindPopup('ACRÓPOLIS')
+ //  L.marker([parthenonlat, parthenonlong]).addTo(map)
+ //   .bindPopup('ACRÓPOLIS')
+ //   .openPopup();
+  
+    var parthenonIcon = L.icon({
+    iconUrl: 'parthenon.jpg',
+    iconSize: [50,40]});
+      
+      L.marker([parthenonlat, parthenonlong],{icon:parthenonIcon}).addTo(map).bindPopup('ACRÓPOLIS  ').openPopup();
+  
+  var acropolisMuseu  = L.icon({
+    iconUrl:'acropolis.jpg',
+    iconSize: [40,70], opacity : 0.3});
+  
+   L.marker([ acropolislat, acropolislong], {icon:acropolisMuseu}).addTo(map)
+    .bindPopup('MUSEU DE<br>ACRÓPOLIS')
     .openPopup();
   
-   L.marker([ acropolislat, acropolislong]).addTo(map)
-    .bindPopup('MUSEU DE ACRÓPOLIS')
-    .openPopup();
+
+
   
   //MIKONOS
 
-  L.marker([ mikonoslat, mikonoslong]).addTo(map)
-    .bindPopup('MIKONOS<BR> dias 18 e 19')
-    .openPopup();
+//  L.marker([ mikonoslat, mikonoslong]).addTo(map)
+//    .bindPopup('MIKONOS<BR> dias 18 e 19')
+//    .openPopup();
   
   // Imagens - Mikonos
   
     //Mykonos windmills
   
-    L.marker([ 37.44445, 25.32595]).addTo(map)
-    .bindPopup('MOINHOS DE VENTO')
-    .openPopup();
+    var mikonosMoinhos = L.icon({
+    iconUrl: 'mikonosMoinhos.jpg',
+    iconSize: [50,40]});
+      
+      L.marker([mikonoslat, mikonoslong], {icon:mikonosMoinhos}).addTo(map)    .bindPopup('Mikonos Moinhos de vento').openPopup();
   
-    imageUrl = ['./Mykonos.jpg'];
-    bounds = L.latLngBounds([
-      [ 37.44445, 25.32595],
-      [37.44445-0.008, 25.32595-0.008]
-    ]);
 
-    imageOverlay = L.imageOverlay( imageUrl, bounds, {
-        opacity: 0.3
-    }).addTo(map);
+  
+//    imageUrl = ['./Mykonos.jpg'];
+//    bounds = L.latLngBounds([
+//      [ 37.44445, 25.32595],
+//      [37.44445-0.008, 25.32595-0.008]
+//    ]);
+
+//    imageOverlay = L.imageOverlay( imageUrl, bounds, {
+//  opacity: 0.3
+//    }).addTo(map);
 
 
   
@@ -102,9 +94,43 @@ function setup() {
   L.marker([36.393154, 25.461510]).addTo(map)
     .bindPopup('SANTORINI<BR> dias 21 e 22')
     .openPopup();
+  
+  //Vinhos-Santorini
+  
 
+  
+    var santoriniVinhos = L.icon({
+    iconUrl: './santoriniWine.jpg',
+    iconSize: [50,40]});
+  
+    L.marker([vinhoslat, vinhoslong], {icon:santoriniVinhos}).addTo(map)
+    .bindPopup('Santorini:<br>Degustação de VINHOS')
+    .openPopup();
+
+      
+    //Mykonos windmills
+  
+      L.marker([mikonoslat, mikonoslong], {icon:mikonosMoinhos}).addTo(map)    .bindPopup('Mikonos Moinhos de vento').openPopup();
+  
+
+  
+  // CRETA
+  
   L.marker([35.338735, 25.144213]).addTo(map)
     .bindPopup('HERAKLIO<BR> dia 24')
     .openPopup();
+  
+  
+    var knossosIcon = L.icon({
+    iconUrl: 'knossosPalace.jpg',
+    iconSize: [50,40]});
+      
+      L.marker([knossoslat, knossoslong],{icon:knossosIcon}).addTo(map).bindPopup('Palácio de Knossos').openPopup();
+  
+  var museuHeraklioIcon = L.icon({
+    iconUrl: 'museuHeraklio.jpeg',
+    iconSize: [50,40]});
+      
+      L.marker([museuHerakliolat, museuHerakliolong],{icon:museuHeraklioIcon}).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
  
 }
