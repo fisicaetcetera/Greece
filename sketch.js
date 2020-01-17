@@ -12,8 +12,8 @@ let vinhoslong = 25.4430365612;
 let museuHerakliolat = 35.3370; 
 let museuHerakliolong = 25.1357;
 var icone = L.icon({
-    iconUrl: './images/icon.png',
-    shadowUrl: './images/icon-shadow.png',
+    iconUrl: './images/marker-icon.png',
+    shadowUrl: './images/marker-shadow.png',
 
     iconSize:     [38, 95], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
