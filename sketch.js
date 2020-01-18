@@ -11,11 +11,13 @@ let vinhoslat = 36.3764718274;
 let vinhoslong = 25.4430365612; 
 let museuHerakliolat = 35.3370; 
 let museuHerakliolong = 25.1357;
+let efesuslat = 37.937162918;
+let efesuslong = 27.337831982;
 var icone = L.icon({
     iconUrl: './images/marker-icon.png',
     shadowUrl: './images/marker-shadow.png',
 
-     iconSize:     [38, 95], // size of the icon
+    iconSize:     [38, 95], // size of the icon
     shadowSize:   [50, 64], // size of the shadow
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     shadowAnchor: [4, 62],  // the same for the shadow
@@ -106,9 +108,7 @@ function setup() {
     .openPopup();
   
   //Vinhos-Santorini
-  
-
-  
+    
     var santoriniVinhos = L.icon({
     iconUrl: './santoriniWine.jpg',
     iconSize: [50,40]});
@@ -121,9 +121,7 @@ function setup() {
     //Mykonos windmills
   
       L.marker([mikonoslat, mikonoslong], {icon:mikonosMoinhos}).addTo(map)    .bindPopup('Mikonos Moinhos de vento').openPopup();
-  
-
-  
+   
   // CRETA
   
   L.marker([35.338735, 25.144213]).addTo(map)
@@ -141,6 +139,27 @@ function setup() {
     iconUrl: 'museuHeraklio.jpeg',
     iconSize: [50,40]});
       
-      L.marker([museuHerakliolat, museuHerakliolong],{icon:museuHeraklioIcon}).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
+      L.marker([museuHerakliolat, museuHerakliolong],
+               {icon:museuHeraklioIcon}).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
+    
+     // EFESUS
+  
+  L.marker([efesuslat, efesuslong]).addTo(map)
+    .bindPopup('EFESUS 2019<BR>')
+    .openPopup();
+  
+  
+    var efesusIcon = L.icon({
+    iconUrl: 'efesus-2019-cut.jpg',
+    iconSize: [100,80]});
+      
+      L.marker([efesuslat, efesuslong],{icon:efesusIcon}).addTo(map).bindPopup('Efesus Beit 2019').openPopup();
+  
+  var museuHeraklioIcon = L.icon({
+    iconUrl: 'museuHeraklio.jpeg',
+    iconSize: [50,40]});
+      
+      L.marker([museuHerakliolat, museuHerakliolong],
+               {icon:museuHeraklioIcon}).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
  
 }
