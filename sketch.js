@@ -155,11 +155,5 @@ function setup() {
       
       L.marker([efesuslat, efesuslong],{icon:efesusIcon}).addTo(map).bindPopup('Efesus Beit 2019').openPopup();
   
-  var museuHeraklioIcon = L.icon({
-    iconUrl: 'museuHeraklio.jpeg',
-    iconSize: [50,40]});
-      
-      L.marker([museuHerakliolat, museuHerakliolong],
-               {icon:museuHeraklioIcon}).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
- 
+
 }
