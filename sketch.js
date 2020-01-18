@@ -150,7 +150,7 @@ function setup() {
   
   
     var efesusIcon = L.icon({
-    iconUrl: 'efesus-2019-cut.jpg',
+    iconUrl: 'Efesus-2019-cut.jpg',
     iconSize: [100,80]});
       
       L.marker([efesuslat, efesuslong],{icon:efesusIcon}).addTo(map).bindPopup('Efesus Beit 2019').openPopup();
