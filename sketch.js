@@ -11,8 +11,8 @@ let vinhoslat = 36.3764718274;
 let vinhoslong = 25.4430365612; 
 let museuHerakliolat = 35.3370; 
 let museuHerakliolong = 25.1357;
-let efesuslat = 37.937162918;
-let efesuslong = 27.337831982;
+let efesuslat = 37.9432;
+let efesuslong = 27.3583;
 var icone = L.icon({
     iconUrl: './images/marker-icon.png',
     shadowUrl: './images/marker-shadow.png',
