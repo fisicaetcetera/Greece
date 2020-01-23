@@ -11,6 +11,17 @@ let vinhoslat = 36.3764718274;
 let vinhoslong = 25.4430365612;
 let museuHerakliolat = 35.3370;
 let museuHerakliolong = 25.1357;
+let barbalhalat =  -7.30551;
+let barbalhalong = -39.3025 ;
+let picoslat = -7.08699;
+let picoslong = -41.4699;
+let balsaslat =  -7.53292;
+let balsaslong = -46.035;
+let carolinalat = -7.33779;
+let carolinalong = -47.4679;
+let itapecurulat =  -3.39501;
+let itapecurulong =  -44.3601;
+
 
 var icone = L.icon({
   iconUrl: './marker-icon.png',
@@ -151,6 +162,40 @@ function setup() {
   L.marker([museuHerakliolat, museuHerakliolong], {
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
+  
+  
+  L.marker([barbalhalat, barbalhalong], {
+      icon: icone
+    }).addTo(map)
+    .bindPopup('Barbalha <BR> dia 24/01 10:00')
+    .openPopup();
+  
+  
+  L.marker([picoslat, picoslong], {
+      icon: icone
+    }).addTo(map)
+    .bindPopup('Picos <BR> dia 25/01 13:00')
+    .openPopup();
+  
+   L.marker([balsaslat, balsaslong], {
+      icon: icone
+    }).addTo(map)
+    .bindPopup('Balsas <BR> dia 25/01 21:00')
+    .openPopup();
+  
+     L.marker([carolinalat, carolinalong], {
+      icon: icone
+    }).addTo(map)
+    .bindPopup('Carolina <BR> dia 26/01 18:00')
+    .openPopup();
+
+L.marker([itapecurulat, itapecurulong], {
+      icon: icone
+    }).addTo(map)
+    .bindPopup('Itapecuru <BR> dia 26/01 18:00')
+    .openPopup();
+
+
 
 function onLocationFound(e) {
     var radius = e.accuracy;
