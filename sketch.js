@@ -172,7 +172,7 @@ function setup() {
   
   
   L.marker([picoslat, picoslong], {
-      icon: icone
+      
     }).addTo(map)
     .bindPopup('Picos <BR> dia 25/01 13:00')
     .openPopup();
