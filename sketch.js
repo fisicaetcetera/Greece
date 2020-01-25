@@ -174,7 +174,7 @@ function setup() {
   L.marker([picoslat, picoslong], {
       
     }).addTo(map)
-    .bindPopup('Picos <BR> dia 25/01 13:00 <BR>')
+    .bindPopup('Picos <BR> dia 25/01 13:00 <BR> Almoço')
     .openPopup();
   
    L.marker([balsaslat, balsaslong], {
