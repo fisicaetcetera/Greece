@@ -53,7 +53,7 @@ function setup() {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
   
-  // create a red polyline from an array of LatLng points
+  // create a blue polyline from an array of LatLng points
 var latlngs = [
     [-5.759290, -35.368370],
     [-3.71839, -38.5434],
@@ -63,7 +63,7 @@ var latlngs = [
     [36.393154, 25.461510],
     [35.338735, 25.144213]
 ];
-var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+var polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
 // zoom the map to the polyline
 map.fitBounds(polyline.getBounds());
 
@@ -86,7 +86,9 @@ map.fitBounds(polyline.getBounds());
   //ATENAS
 
   L.marker([37.97945, 23.71622]).addTo(map)
-    .bindPopup('ATENAS  <BR> dia 16: passeio pela manhã <BR> e tarde livre')
+    .bindPopup('ATENAS  <BR> dia 15 - chegada e resto do dia livre, <br> 
+               dia 16: passeio pela manhã <BR> e tarde livre <br>
+              dia 17: partida para MICONOS')
     .openPopup();
 
   var parthenonIcon = L.icon({
@@ -119,7 +121,8 @@ map.fitBounds(polyline.getBounds());
 
   L.marker([mikonoslat, mikonoslong], {
     icon: mikonosMoinhos
-  }).addTo(map).bindPopup('Mikonos Moinhos de vento').openPopup();
+  }).addTo(map).bindPopup('dia 17: chegada a MIKONOS<br>
+           dias 18 e 19 na ilha' ).openPopup();
 
 
   //SANTORINI
