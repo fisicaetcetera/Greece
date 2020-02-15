@@ -64,16 +64,13 @@ var latlngsIda = [
     [36.393154, 25.461510],
     [35.338735, 25.144213]
 ];
-var polyline = L.polyline(latlngsIda, {color: 'blue'}).addTo(map);
+var polylineIda = L.polyline(latlngsIda, {color: 'blue'}).addTo(map);
 // zoom the map to the polyline
-map.fitBounds(polyline.getBounds());
+map.fitBounds(polylineIda.getBounds());
 //===============================================================  
   
     // TRAJETO DE VOLTA EM AMARELO  ---------------------------------------------------
- var polyline = L.polyline(latlngsVolta, {color: 'yellow'}).addTo(map);
-// zoom the map to the polyline
-map.fitBounds(polyline.getBounds()); 
-  
+   
   var latlngsVolta = [
     [35.338735, 25.144213],
      [37.97945, 23.71622],
@@ -81,6 +78,10 @@ map.fitBounds(polyline.getBounds());
     [-3.71839, -38.5434],
     [-5.759290, -35.368370]
     ];
+  
+  var polylineVolta = L.polyline(latlngsVolta, {color: 'yellow'}).addTo(map);
+// zoom the map to the polyline
+map.fitBounds(polylineVolta.getBounds()); 
   
   //=============================================================
 
