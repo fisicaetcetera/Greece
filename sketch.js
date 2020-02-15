@@ -52,6 +52,20 @@ function setup() {
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
+  // create a red polyline from an array of LatLng points
+var latlngs = [
+    [-5.759290, -35.368370],
+    [-3.71839, -38.5434],
+    [52.370216, 4.895168],
+    [37.97945, 23.71622],
+    [37.44529, 25.32872],
+    [36.393154, 25.461510],
+    [35.338735, 25.144213]
+];
+var polyline = L.polyline(latlngs, {color: 'red'}).addTo(map);
+// zoom the map to the polyline
+map.fitBounds(polyline.getBounds());
 
   L.marker([-5.759290, -35.368370], {
       icon: icone
