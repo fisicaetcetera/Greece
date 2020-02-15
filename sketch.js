@@ -119,8 +119,7 @@ map.fitBounds(polyline.getBounds());
 
   L.marker([mikonoslat, mikonoslong], {
     icon: mikonosMoinhos
-  }).addTo(map).bindPopup('dia 17: chegada a MIKONOS<br>
-           dias 18 e 19 na ilha' ).openPopup();
+  }).addTo(map).bindPopup('dia 17: chegada a MIKONOS<br> dias 18 e 19 na ilha' ).openPopup();
 
 
   //SANTORINI
@@ -149,7 +148,7 @@ map.fitBounds(polyline.getBounds());
 
   L.marker([mikonoslat, mikonoslong], {
     icon: mikonosMoinhos
-  }).addTo(map).bindPopup('Mikonos Moinhos de vento').openPopup();
+  }).addTo(map).bindPopup('dias 19 e 20: Mikonos').openPopup();
 
 
 
