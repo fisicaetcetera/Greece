@@ -88,23 +88,23 @@ map.fitBounds(polylineVolta.getBounds());
   L.marker([-5.759290, -35.368370], {
       icon: icone
     }).addTo(map)
-    .bindPopup('AEROPORTO  <BR> dia 14 17:20')
+    .bindPopup('AEROPORTO  <BR> dia 14 17:20 ,<br> Retorno: dia 26')
     .openPopup();
 
   L.marker([-3.71839, -38.5434], {
       iconSize: [9, 27]
     }).addTo(map)
-    .bindPopup('FORTALEZA  <BR> dia 14 19:45 ')
+    .bindPopup('FORTALEZA  <BR> dia 14 19:45  <br> Retorno dia 26 19:00')
     .openPopup();
 
   L.marker([52.370216, 4.895168]).addTo(map)
-    .bindPopup('AMSTERDAM  <BR> dia 15 12:20')
+    .bindPopup('AMSTERDAM  <BR> dia 15 12:20 <br> Retorno: 12:45 dia 26  20:00')
     .openPopup();
 
   //ATENAS
 
   L.marker([37.97945, 23.71622]).addTo(map)
-    .bindPopup('ATENAS  <BR> dia 15: chegada e resto do dia livre <br> dia 16 passeio pela manhã e tarde livre <BR> dia 17 partida para MIKONOS')
+    .bindPopup('ATENAS  <BR> dia 15: chegada e resto do dia livre <br> dia 16 passeio pela manhã e tarde livre <BR> dia 17 partida para MIKONOS. <br> No retorno dias 25 e 26 : 6:00')
     .openPopup();
 
   var parthenonIcon = L.icon({
