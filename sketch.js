@@ -52,9 +52,10 @@ function setup() {
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+
+  // TRAJETO DE IDA EM AZUL  ---------------------------------------------------
   
-  // create a blue polyline from an array of LatLng points
-var latlngs = [
+var latlngsIda = [
     [-5.759290, -35.368370],
     [-3.71839, -38.5434],
     [52.370216, 4.895168],
@@ -63,9 +64,25 @@ var latlngs = [
     [36.393154, 25.461510],
     [35.338735, 25.144213]
 ];
-var polyline = L.polyline(latlngs, {color: 'blue'}).addTo(map);
+var polyline = L.polyline(latlngsIda, {color: 'blue'}).addTo(map);
 // zoom the map to the polyline
 map.fitBounds(polyline.getBounds());
+//===============================================================  
+  
+    // TRAJETO DE VOLTA EM AMARELO  ---------------------------------------------------
+ var polyline = L.polyline(latlngsVolta, {color: 'yellow'}).addTo(map);
+// zoom the map to the polyline
+map.fitBounds(polyline.getBounds()); 
+  
+  var latlngsVolta = [
+    [35.338735, 25.144213],
+     [37.97945, 23.71622],
+      [52.370216, 4.895168],
+    [-3.71839, -38.5434],
+    [-5.759290, -35.368370]
+    ];
+  
+  //=============================================================
 
   L.marker([-5.759290, -35.368370], {
       icon: icone
@@ -155,7 +172,7 @@ map.fitBounds(polyline.getBounds());
   // CRETA
 
   L.marker([35.338735, 25.144213]).addTo(map)
-    .bindPopup('HERAKLIO<BR> dia 24')
+    .bindPopup('CRETA : dia 24')
     .openPopup();
 
 
