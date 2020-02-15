@@ -173,7 +173,7 @@ map.fitBounds(polylineVolta.getBounds());
   // CRETA
 
   L.marker([35.338735, 25.144213]).addTo(map)
-    .bindPopup('CRETA : dia 24')
+    .bindPopup('CRETA : dia 24 <br> Retorno para Atenas dia 25')
     .openPopup();
 
 
