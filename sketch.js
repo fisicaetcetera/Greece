@@ -86,9 +86,7 @@ map.fitBounds(polyline.getBounds());
   //ATENAS
 
   L.marker([37.97945, 23.71622]).addTo(map)
-    .bindPopup('ATENAS  <BR> dia 15: chegada e resto do dia livre <BR> 
-               dia 16: passeio pela manhã <BR> e tarde livre <BR>
-              dia 17: partida para MIKONOS')
+    .bindPopup('ATENAS  <BR> dia 15: chegada e resto do dia livre <br> dia 16 passeio pela manhã e tarde livre <BR> dia 17 partida para MIKONOS')
     .openPopup();
 
   var parthenonIcon = L.icon({
