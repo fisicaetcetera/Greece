@@ -198,9 +198,13 @@ map.fitBounds(polylineVolta.getBounds());
  
 function onLocationFound(e) {
     var radius = e.accuracy;
+    var altura = e.altitude;
+    var deltaAltura = e.altitudeAccuracy;
+    var direcao = e.heading;
+    var velocidade = e.speed;
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Você!").openPopup();
+        .bindPopup("Você!<br> Altitude:" +altitude+"<br>Direcao:"+direcao).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
