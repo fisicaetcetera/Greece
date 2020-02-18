@@ -84,7 +84,7 @@ map.fitBounds(polylineIda.getBounds());
 map.fitBounds(polylineVolta.getBounds()); 
   
   let localizacao;
-  if('geolocation' in navigator)
+  if("geolocation" in navigator)
         {
             console.log('geolocation available 🤗️');
             navigator.geolocation.getCurrentPosition(position => {
@@ -230,7 +230,7 @@ if(localizacao){
     //var velocidade = e.speed.toString();
     L.marker(latlon).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
-    L.circle(latlng, accuracy).addTo(map);
+    L.circle(latlon, accuracy).addTo(map);
 }
 
 //map.on('locationfound', onLocationFound);
