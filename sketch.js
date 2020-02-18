@@ -195,40 +195,7 @@ map.fitBounds(polylineVolta.getBounds());
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
   
-  
-  L.marker([barbalhalat, barbalhalong], {
-      icon: icone
-    }).addTo(map)
-    .bindPopup('Barbalha <BR> dia 24/01 10:00')
-    .openPopup();
-  
-  
-  L.marker([picoslat, picoslong], {
-      
-    }).addTo(map)
-    .bindPopup('Picos <BR> dia 25/01 13:00 <BR> Almoço')
-    .openPopup();
-  
-   L.marker([balsaslat, balsaslong], {
-      icon: icone
-    }).addTo(map)
-    .bindPopup('Balsas <BR> dia 25/01 21:00')
-    .openPopup();
-  
-     L.marker([carolinalat, carolinalong], {
-      icon: icone
-    }).addTo(map)
-    .bindPopup('Carolina <BR> dia 26/01 18:00')
-    .openPopup();
-
-L.marker([itapecurulat, itapecurulong], {
-      icon: icone
-    }).addTo(map)
-    .bindPopup('Itapecuru <BR> dia 26/01 18:00')
-    .openPopup();
-
-
-
+ 
 function onLocationFound(e) {
     var radius = e.accuracy;
 
