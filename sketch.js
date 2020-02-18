@@ -198,10 +198,10 @@ map.fitBounds(polylineVolta.getBounds());
  
 function onLocationFound(e) {
     var radius = e.accuracy;
-    var altitude = e.altitude;
-    var deltaAltura = e.altitudeAccuracy;
-    var direcao = e.heading;
-    var velocidade = e.speed;
+    var altitude = e.altitude.toString();
+    var deltaAltura = e.altitudeAccuracy.toString;
+    var direcao = e.heading.toString;
+    var velocidade = e.speed.toString();
 
     L.marker(e.latlng).addTo(map)
         .bindPopup("Você!<br> Altitude:" +altitude+"<br>Direcao:"+direcao).openPopup();
