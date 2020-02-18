@@ -23,9 +23,9 @@ let itapecurulat =  -3.39501;
 let itapecurulong =  -44.3601;
 var lat;
 var lon;
-              var lattxt;
-              var lontxt;
-              var latlon;
+var lattxt;
+var lontxt;
+var latlon;
 
 
 var icone = L.icon({
