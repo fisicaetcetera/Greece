@@ -228,7 +228,7 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-    L.marker(latlon).addTo(map)
+    L.marker([lat,lon]).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
     L.circle(latlon, accuracy).addTo(map);
 }
