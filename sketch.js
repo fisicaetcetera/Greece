@@ -26,6 +26,7 @@ var lon;
 var lattxt;
 var lontxt;
 var latlon;
+var accuracy;
 
 
 var icone = L.icon({
@@ -104,7 +105,7 @@ map.fitBounds(polylineVolta.getBounds());
               //const altitude = posicao.altitude.toString();
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
-              const accuracy = posicao.accuracy;
+              accuracy = posicao.accuracy;
               
             });
              } else {  
@@ -234,9 +235,9 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-    L.marker(latlon).addTo(map)
+    L.marker([lat, lon]).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
-    L.circle(latlon, accuracy).addTo(map);
+    L.circle([lat,lon], accuracy).addTo(map);
 }
 
 //map.on('locationfound', onLocationFound);
