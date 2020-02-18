@@ -46,7 +46,7 @@ function setup() {
     maxZoom: 12
   });
 
-  map.on('locationfound', onLocationFound);
+  //map.on('locationfound', onLocationFound);
 
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
