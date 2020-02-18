@@ -21,6 +21,11 @@ let carolinalat = -7.33779;
 let carolinalong = -47.4679;
 let itapecurulat =  -3.39501;
 let itapecurulong =  -44.3601;
+var lat;
+var lon;
+              var lattxt;
+              var lontxt;
+              var latlon;
 
 
 var icone = L.icon({
@@ -91,11 +96,11 @@ map.fitBounds(polylineVolta.getBounds());
             navigator.geolocation.getCurrentPosition(position => {
               const posicao = position.coords;
               console.log(posicao);
-              const lat = posicao.latitude;
-              const lon = posicao.longitude;
-              var lattxt = lat.toString();
-              var lontxt = lon.toString();
-              var latlon = [lat, lon];
+              lat = posicao.latitude;
+              lon = posicao.longitude;
+              lattxt = lat.toString();
+              lontxt = lon.toString();
+              latlon = [lat, lon];
               //const altitude = posicao.altitude.toString();
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
