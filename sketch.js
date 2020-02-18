@@ -91,7 +91,7 @@ accuracy: 1107
 altitudeAccuracy: null
 heading: null
 speed: null
-  
+  let localizacao,
   if('geolocation' in navigator)
         {
             console.log('geolocation available 🤗️');
@@ -106,9 +106,9 @@ speed: null
               const speed = posicao.speed.toString();
               const heading = posicao.heading.toString();
               const accuracy = posicao.accuracy;
-              boolean localizacao = true;
+              localizacao = true;
              } else {  
-              boolean localizacao = false;
+              localizacao = false;
              }                                                     
 
   
@@ -225,7 +225,7 @@ speed: null
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
   
- 
+if(localizacao){
 //function onLocationFound(e) {
   //console.log(e);
     //var radius = e.accuracy;
