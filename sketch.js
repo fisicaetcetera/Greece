@@ -235,9 +235,9 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-    L.marker([lat, lon]).addTo(map)
+    L.marker(latlon).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
-    L.circle([lat,lon], accuracy).addTo(map);
+    L.circle(latlon, accuracy).addTo(map);
 }
 
 //map.on('locationfound', onLocationFound);
