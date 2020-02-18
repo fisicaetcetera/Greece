@@ -99,6 +99,7 @@ map.fitBounds(polylineVolta.getBounds());
               const heading = posicao.heading.toString();
               const accuracy = posicao.accuracy;
               localizacao = true;
+            });
              } else {  
               localizacao = false;
              }                                                     
