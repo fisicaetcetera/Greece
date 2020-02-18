@@ -225,7 +225,7 @@ if(localizacao){
   //console.log(e);
     //var radius = e.accuracy;
     //var latitude = e.latitude.toString();
-    var longitude = e.longitude.toString();
+    //var longitude = e.longitude.toString();
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
