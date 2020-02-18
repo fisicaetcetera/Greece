@@ -89,14 +89,15 @@ map.fitBounds(polylineVolta.getBounds());
             console.log('geolocation available 🤗️');
             navigator.geolocation.getCurrentPosition(position => {
               const posicao = position.coords;
+              console.log(posicao);
               const lat = posicao.latitude;
               const lon = posicao.longitude;
               var lattxt = lat.toString();
               var lontxt = lon.toString();
               var latlon = [lat, lon];
-              const altitude = posicao.altitude.toString();
-              const speed = posicao.speed.toString();
-              const heading = posicao.heading.toString();
+              //const altitude = posicao.altitude.toString();
+              //const speed = posicao.speed.toString();
+              //const heading = posicao.heading.toString();
               const accuracy = posicao.accuracy;
               localizacao = true;
             });
