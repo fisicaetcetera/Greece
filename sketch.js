@@ -200,13 +200,13 @@ function onLocationFound(e) {
   console.log(e);
     var radius = e.accuracy;
     var latitude = e.latitude.toString();
-    var lonitude = e.longitude.toString();
+    var longitude = e.longitude.toString();
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
 
     L.marker(e.latlng).addTo(map)
-        .bindPopup("Você!<br> Altitude:" +altitude+"<br>Direcao:"+direcao).openPopup();
+        .bindPopup("Você!<br>Latitude:" +latitude+"<br> Longitude:"+ longitude).openPopup();
 
     L.circle(e.latlng, radius).addTo(map);
 }
