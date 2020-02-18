@@ -83,6 +83,36 @@ map.fitBounds(polylineIda.getBounds());
 // zoom the map to the polyline
 map.fitBounds(polylineVolta.getBounds()); 
   
+  //Localização do usuário
+  latitude: -5.8673873
+longitude: -35.203845199999996
+altitude: null
+accuracy: 1107
+altitudeAccuracy: null
+heading: null
+speed: null
+  
+  if('geolocation' in navigator)
+        {
+            console.log('geolocation available 🤗️');
+            navigator.geolocation.getCurrentPosition(position => {
+              const posicao = position.coords;
+              const lat = posicao.latitude;
+              const lon = posicao.longitude;
+              var lattxt = lat.toString();
+              var lontxt = lon.toString();
+              var latlon = [lat, lon];
+              const altitude = posicao.altitude.toString();
+              const speed = posicao.speed.toString();
+              const heading = posicao.heading.toString();
+              const accuracy = posicao.accuracy;
+              boolean localizacao = true;
+             } else {  
+              boolean localizacao = false;
+             }                                                     
+
+  
+  
   //=============================================================
 
   L.marker([-5.759290, -35.368370], {
@@ -196,28 +226,24 @@ map.fitBounds(polylineVolta.getBounds());
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
   
  
-function onLocationFound(e) {
-  console.log(e);
-    var radius = e.accuracy;
-    var latitude = e.latitude.toString();
+//function onLocationFound(e) {
+  //console.log(e);
+    //var radius = e.accuracy;
+    //var latitude = e.latitude.toString();
     var longitude = e.longitude.toString();
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-
-    L.marker(e.latlng).addTo(map)
-        .bindPopup("Você!<br>Latitude:" +latitude+"<br> Longitude:"+ longitude).openPopup();
-
-    L.circle(e.latlng, radius).addTo(map);
+    L.marker(latlon).addTo(map)
+        .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
+    L.circle(latlng, accuracy).addTo(map);
 }
 
-map.on('locationfound', onLocationFound);
-
-function onLocationError(e) {
-    alert(e.message);
-}
-
-map.on('locationerror', onLocationError);
+//map.on('locationfound', onLocationFound);
+//function onLocationError(e) {
+//    alert(e.message);
+//}
+//map.on('locationerror', onLocationError);
 
   
 } //setup
