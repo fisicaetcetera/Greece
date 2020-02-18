@@ -199,10 +199,11 @@ map.fitBounds(polylineVolta.getBounds());
 function onLocationFound(e) {
   console.log(e);
     var radius = e.accuracy;
-    //var altitude = e.altitude.toString();
-    var deltaAltura = e.altitudeAccuracy.toString;
-    var direcao = e.heading.toString;
-    var velocidade = e.speed.toString();
+    var latitude = e.latitude.toString();
+    var lonitude = e.longitude.toString();
+    //var deltaAltura = e.altitudeAccuracy.toString;
+    //var direcao = e.heading.toString;
+    //var velocidade = e.speed.toString();
 
     L.marker(e.latlng).addTo(map)
         .bindPopup("Você!<br> Altitude:" +altitude+"<br>Direcao:"+direcao).openPopup();
