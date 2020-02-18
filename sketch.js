@@ -83,15 +83,7 @@ map.fitBounds(polylineIda.getBounds());
 // zoom the map to the polyline
 map.fitBounds(polylineVolta.getBounds()); 
   
-  //Localização do usuário
-  latitude: -5.8673873
-longitude: -35.203845199999996
-altitude: null
-accuracy: 1107
-altitudeAccuracy: null
-heading: null
-speed: null
-  let localizacao,
+  let localizacao;
   if('geolocation' in navigator)
         {
             console.log('geolocation available 🤗️');
