@@ -86,7 +86,8 @@ map.fitBounds(polylineVolta.getBounds());
   let localizacao;
   if("geolocation" in navigator)
         {
-            console.log('geolocation available 🤗️');
+          localizacao = true;  
+          console.log('geolocation available 🤗️');
             navigator.geolocation.getCurrentPosition(position => {
               const posicao = position.coords;
               console.log(posicao);
@@ -99,7 +100,7 @@ map.fitBounds(polylineVolta.getBounds());
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
               const accuracy = posicao.accuracy;
-              localizacao = true;
+              
             });
              } else {  
               localizacao = false;
@@ -228,7 +229,7 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-    L.marker([lat,lon]).addTo(map)
+    L.marker(latlon).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude+"<br> Altitude: "+altitude).openPopup();
     L.circle(latlon, accuracy).addTo(map);
 }
