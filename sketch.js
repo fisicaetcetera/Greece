@@ -197,6 +197,7 @@ map.fitBounds(polylineVolta.getBounds());
   
  
 function onLocationFound(e) {
+  console.log(e);
     var radius = e.accuracy;
     //var altitude = e.altitude.toString();
     var deltaAltura = e.altitudeAccuracy.toString;
