@@ -102,6 +102,7 @@ map.fitBounds(polylineVolta.getBounds());
               lattxt = lat.toString();
               lontxt = lon.toString();
               latlon = [lat, lon];
+              console.log(lat,lon,latlon);
               //const altitude = posicao.altitude.toString();
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
