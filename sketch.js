@@ -107,11 +107,14 @@ map.fitBounds(polylineVolta.getBounds());
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
               accuracy = posicao.accuracy;
+               L.marker(latlon).addTo(map).bindPopup("Você!<br>Latitude: " +latuser+"<br> Longitude: "+ lonuser).openPopup();
+              L.circle(latlonuser, accuracy).addTo(map);
               
             });
              } else {  
               localizacao = false;
-             }                                                     
+             } 
+  console.log("115-just outside anonymous",latuser,lonuser,latlonuser);
 
   
   
@@ -227,7 +230,9 @@ map.fitBounds(polylineVolta.getBounds());
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
  console.log("229",latuser,lonuser,latlonuser);  
-if(localizacao){
+  
+  ===========
+//if(localizacao){
 //function onLocationFound(e) {
   //console.log(e);
     //var radius = e.accuracy;
@@ -236,11 +241,11 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-   console.log("230",latuser,lonuser,latlonuser);
+   //console.log("230",latuser,lonuser,latlonuser);
     //L.marker(latlon).addTo(map)
     //    .bindPopup("Você!<br>Latitude: " +lat+"<br> Longitude: "+ lon).openPopup();
     //L.circle(latlon, accuracy).addTo(map);
-}
+//}
 
 //map.on('locationfound', onLocationFound);
 //function onLocationError(e) {
