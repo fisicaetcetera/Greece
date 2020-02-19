@@ -236,9 +236,9 @@ if(localizacao){
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
     console.log(latlon,longitude);
-    L.marker(latlon).addTo(map)
+    //L.marker(latlon).addTo(map)
         .bindPopup("Você!<br>Latitude: " +latitude+"<br> Longitude: "+ longitude).openPopup();
-    L.circle(latlon, accuracy).addTo(map);
+    //L.circle(latlon, accuracy).addTo(map);
 }
 
 //map.on('locationfound', onLocationFound);
