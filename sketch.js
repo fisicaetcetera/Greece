@@ -223,7 +223,7 @@ map.fitBounds(polylineVolta.getBounds());
 
   var museuHeraklioIcon = L.icon({
     iconUrl: 'museuHeraklio.jpeg',
-    iconAnchor: [9, -94],
+    iconAnchor: [9, 124],
     iconSize: [50, 40]
   });
 
