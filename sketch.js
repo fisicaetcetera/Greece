@@ -231,7 +231,6 @@ map.fitBounds(polylineVolta.getBounds());
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
  console.log("229",latuser,lonuser,latlonuser);  
   
-  ===========
 //if(localizacao){
 //function onLocationFound(e) {
   //console.log(e);
