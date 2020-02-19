@@ -227,6 +227,7 @@ map.fitBounds(polylineVolta.getBounds());
   });
 
   L.marker([museuHerakliolat, museuHerakliolong], {
+    iconAnchor: [0,0],
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup(); 
   
