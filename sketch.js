@@ -89,7 +89,7 @@ map.fitBounds(polylineIda.getBounds());
 // zoom the map to the polyline
 map.fitBounds(polylineVolta.getBounds()); 
   
-  let localizacao;
+  let localizacao = false;
   if("geolocation" in navigator)
         {
           localizacao = true;  
@@ -99,9 +99,9 @@ map.fitBounds(polylineVolta.getBounds());
               console.log(posicao);
               latuser = posicao.latitude;
               lonuser = posicao.longitude;
-              lattxt = lat.toString();
-              lontxt = lon.toString();
-              latlonuser = [lat, lon];
+              lattxt = latuser.toString();
+              lontxt = lonuser.toString();
+              latlonuser = [latuser, lonuser];
               console.log(latuser,lonuser,latlonuser);
               //const altitude = posicao.altitude.toString();
               //const speed = posicao.speed.toString();
@@ -237,7 +237,6 @@ if(localizacao){
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
    console.log("230",latuser,lonuser,latlonuser);
-    console.log(latlon,lat,lon);
     //L.marker(latlon).addTo(map)
     //    .bindPopup("Você!<br>Latitude: " +lat+"<br> Longitude: "+ lon).openPopup();
     //L.circle(latlon, accuracy).addTo(map);
