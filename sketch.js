@@ -21,11 +21,11 @@ let carolinalat = -7.33779;
 let carolinalong = -47.4679;
 let itapecurulat =  -3.39501;
 let itapecurulong =  -44.3601;
-var lat;
-var lon;
+var latuser;
+var lonuser;
 var lattxt;
 var lontxt;
-var latlon;
+var latlonuser;
 var accuracy;
 
 
@@ -97,12 +97,12 @@ map.fitBounds(polylineVolta.getBounds());
             navigator.geolocation.getCurrentPosition(position => {
               const posicao = position.coords;
               console.log(posicao);
-              lat = posicao.latitude;
-              lon = posicao.longitude;
+              latuser = posicao.latitude;
+              lonuser = posicao.longitude;
               lattxt = lat.toString();
               lontxt = lon.toString();
-              latlon = [lat, lon];
-              console.log(lat,lon,latlon);
+              latlonuser = [lat, lon];
+              console.log(latuser,lonuser,latlonuser);
               //const altitude = posicao.altitude.toString();
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
@@ -226,7 +226,7 @@ map.fitBounds(polylineVolta.getBounds());
   L.marker([museuHerakliolat, museuHerakliolong], {
     icon: museuHeraklioIcon
   }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
- console.log("229",lat,lon,latlon);  
+ console.log("229",latuser,lonuser,latlonuser);  
 if(localizacao){
 //function onLocationFound(e) {
   //console.log(e);
@@ -236,7 +236,7 @@ if(localizacao){
     //var deltaAltura = e.altitudeAccuracy.toString;
     //var direcao = e.heading.toString;
     //var velocidade = e.speed.toString();
-   console.log("230",lat,lon,latlon);
+   console.log("230",latuser,lonuser,latlonuser);
     console.log(latlon,lat,lon);
     //L.marker(latlon).addTo(map)
     //    .bindPopup("Você!<br>Latitude: " +lat+"<br> Longitude: "+ lon).openPopup();
