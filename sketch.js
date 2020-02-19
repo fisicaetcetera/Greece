@@ -107,7 +107,7 @@ map.fitBounds(polylineVolta.getBounds());
               //const speed = posicao.speed.toString();
               //const heading = posicao.heading.toString();
               accuracy = posicao.accuracy;
-               L.marker(latlon).addTo(map).bindPopup("Você!<br>Latitude: " +latuser+"<br> Longitude: "+ lonuser).openPopup();
+               L.marker(latlonuser).addTo(map).bindPopup("Você!<br>Latitude: " +latuser+"<br> Longitude: "+ lonuser).openPopup();
               L.circle(latlonuser, accuracy).addTo(map);
               
             });
