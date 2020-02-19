@@ -223,34 +223,12 @@ map.fitBounds(polylineVolta.getBounds());
 
   var museuHeraklioIcon = L.icon({
     iconUrl: 'museuHeraklio.jpeg',
+    iconAnchor: [9, -94],
     iconSize: [50, 40]
   });
 
   L.marker([museuHerakliolat, museuHerakliolong], {
     icon: museuHeraklioIcon
-  }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup();
- console.log("229",latuser,lonuser,latlonuser);  
-  
-//if(localizacao){
-//function onLocationFound(e) {
-  //console.log(e);
-    //var radius = e.accuracy;
-    //var latitude = e.latitude.toString();
-    //var longitude = e.longitude.toString();
-    //var deltaAltura = e.altitudeAccuracy.toString;
-    //var direcao = e.heading.toString;
-    //var velocidade = e.speed.toString();
-   //console.log("230",latuser,lonuser,latlonuser);
-    //L.marker(latlon).addTo(map)
-    //    .bindPopup("Você!<br>Latitude: " +lat+"<br> Longitude: "+ lon).openPopup();
-    //L.circle(latlon, accuracy).addTo(map);
-//}
-
-//map.on('locationfound', onLocationFound);
-//function onLocationError(e) {
-//    alert(e.message);
-//}
-//map.on('locationerror', onLocationError);
-
+  }).addTo(map).bindPopup('Museu Arqueológico de Heráclio').openPopup(); 
   
 } //setup
