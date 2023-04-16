@@ -1,3 +1,4 @@
+///Dropbox/local-server/Ellada/Greece-master
 var imageUrl;
 let parthenonlat = 37.97025;
 let parthenonlong = 23.72247;
@@ -11,16 +12,10 @@ let vinhoslat = 36.3764718274;
 let vinhoslong = 25.4430365612;
 let museuHerakliolat = 35.3370;
 let museuHerakliolong = 25.1357;
-let barbalhalat =  -7.30551;
-let barbalhalong = -39.3025 ;
-let picoslat = -7.08699;
-let picoslong = -41.4699;
-let balsaslat =  -7.53292;
-let balsaslong = -46.035;
-let carolinalat = -7.33779;
-let carolinalong = -47.4679;
-let itapecurulat =  -3.39501;
-let itapecurulong =  -44.3601;
+let madrilat = 40.416775;
+let madrilong = -3.703750;
+let miloslat = 36.726013;
+let miloslong = 24.446859;
 var latuser;
 var lonuser;
 var lattxt;
@@ -52,23 +47,63 @@ function setup() {
     maxZoom: 12
   });
 
+  map.setView([-6,-35],5);
   //map.on('locationfound', onLocationFound);
 
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
+  
+  //Escala
+  L.control.scale({
+     metric: true,
+     imperial: false,
+     position: 'topleft'
+  }).addTo(map);
+  //Watermark, meu
+  L.Control.Watermark=L.Control.extend({
+   onAdd: function(map){
+      var img = L.DomUtil.create('img');
+      img.src = 'eniLogo.ico';
+      img.style.width = '30px';
+      return img;
+      },
+    onRemove: function(map){},
+    });
+    
+    L.control.watermark = function(opts){
+      return new L.Control.Watermark(opts);
+    }
+    
+    L.control.watermark({position: 'topleft'}).addTo(map);  
+//Water mark, beit
+  L.Control.Watermark=L.Control.extend({
+   onAdd: function(map){
+      var img = L.DomUtil.create('img');
+      img.src = 'beitLogo.png';
+      img.style.width = '100px';
+      return img;
+      },
+    onRemove: function(map){},
+    });
+    
+    L.control.watermark = function(opts){
+      return new L.Control.Watermark(opts);
+    }
+    
+    L.control.watermark({position: 'topleft'}).addTo(map);  
 
   // TRAJETO DE IDA EM AZUL  ---------------------------------------------------
   
 var latlngsIda = [
-    [-5.759290, -35.368370],
-    [-3.71839, -38.5434],
-    [52.370216, 4.895168],
-    [37.97945, 23.71622],
-    [37.44529, 25.32872],
-    [36.393154, 25.461510],
-    [35.338735, 25.144213]
+    [-5.759290, -35.368370], //Natal
+    [-23.454, -46.534096], // Sao Paulo
+    [40.416775, -3.703750], //Madrid
+    [37.98310, 23.72739], // Atenas
+    [37.44529, 25.32872],  // Mykonos
+    [36.393154, 25.461510],  //  Santorini
+    [35.338735, 25.144213]  //Creta
 ];
 var polylineIda = L.polyline(latlngsIda, {color: 'blue'}).addTo(map);
 // zoom the map to the polyline
@@ -78,11 +113,12 @@ map.fitBounds(polylineIda.getBounds());
     // TRAJETO DE VOLTA EM AMARELO  ---------------------------------------------------
    
   var latlngsVolta = [
-    [35.338735, 25.144213],
-     [37.97945, 23.71622],
-      [52.370216, 4.895168],
-    [-3.71839, -38.5434],
-    [-5.759290, -35.368370]
+    [35.338735, 25.144213], //Creta
+        [36.726013, 24.446859],  //Milos
+     [37.99945, 23.71622],  //Atenas
+    [40.416775, -3.803750], //Madrid
+    [-23.454, -46.634096], // Sao Paulo    
+    [-5.759290, -35.468370] //Natal
     ];
   
   var polylineVolta = L.polyline(latlngsVolta, {color: 'yellow'}).addTo(map);
@@ -109,7 +145,7 @@ map.fitBounds(polylineVolta.getBounds());
               accuracy = posicao.accuracy;
                L.marker(latlonuser).addTo(map).bindPopup("Você!<br>Latitude: " +latuser+"<br> Longitude: "+ lonuser).openPopup();
               L.circle(latlonuser, accuracy).addTo(map);
-              
+              map.setView(latlonuser, 5); // ([latuser, lonuser], zoom)
             });
              } else {  
               localizacao = false;
@@ -123,24 +159,24 @@ map.fitBounds(polylineVolta.getBounds());
   L.marker([-5.759290, -35.368370], {
       icon: icone
     }).addTo(map)
-    .bindPopup('AEROPORTO  <BR> dia 14 17:20 ,<br> Retorno: dia 26')
+    .bindPopup('AEROPORTO  <BR> dia 5 ,<br> Retorno: dia 16 ')
     .openPopup();
-
-  L.marker([-3.71839, -38.5434], {
-      iconSize: [9, 27]
-    }).addTo(map)
-    .bindPopup('FORTALEZA  <BR> dia 14 19:45  <br> Retorno dia 26 19:00')
-    .openPopup();
-
-  L.marker([52.370216, 4.895168]).addTo(map)
-    .bindPopup('AMSTERDAM  <BR> dia 15 12:20 <br> Retorno: 12:45 dia 26  20:00')
+    
+  // MADRI
+  L.marker([madrilat, madrilong]).addTo(map)
+    .bindPopup('MADRI. Dias 6 e 15 ')
     .openPopup();
 
   //ATENAS
 
   L.marker([37.97945, 23.71622]).addTo(map)
-    .bindPopup('ATENAS  <BR> dia 15: chegada e resto do dia livre <br> dia 16 passeio pela manhã e tarde livre <BR> dia 17 partida para MIKONOS. <br> No retorno dias 25 e 26 : 6:00')
+    .bindPopup('ATENAS  <BR> dias 6, 7 e 8')
     .openPopup();
+    
+     // MILOS
+  L.marker([miloslat, miloslong]).addTo(map)
+    .bindPopup('MILOS: dia ?')
+    .openPopup(); 
 
   var parthenonIcon = L.icon({
     iconUrl: 'parthenon.jpg',
@@ -151,17 +187,7 @@ map.fitBounds(polylineVolta.getBounds());
     icon: parthenonIcon
   }).addTo(map).bindPopup('ACRÓPOLIS  ').openPopup();
 
-  var acropolisMuseu = L.icon({
-    iconUrl: 'acropolis.jpg',
-    iconSize: [40, 70],
-    opacity: 0.3
-  });
 
-  L.marker([acropolislat, acropolislong], {
-      icon: acropolisMuseu
-    }).addTo(map)
-    .bindPopup('MUSEU DE<br>ACRÓPOLIS')
-    .openPopup();
 
 
 
@@ -172,13 +198,13 @@ map.fitBounds(polylineVolta.getBounds());
 
   L.marker([mikonoslat, mikonoslong], {
     icon: mikonosMoinhos
-  }).addTo(map).bindPopup('dia 17: chegada a MIKONOS<br> dias 18 e 19 na ilha' ).openPopup();
+  }).addTo(map).bindPopup('dias ...' ).openPopup();
 
 
   //SANTORINI
 
   L.marker([36.393154, 25.461510]).addTo(map)
-    .bindPopup('SANTORINI<BR> dias 21 e 22')
+    .bindPopup('SANTORINI<BR> dias ')
     .openPopup();
 
   //Vinhos-Santorini
@@ -201,14 +227,14 @@ map.fitBounds(polylineVolta.getBounds());
 
   L.marker([mikonoslat, mikonoslong], {
     icon: mikonosMoinhos
-  }).addTo(map).bindPopup('dias 19 e 20: Mikonos').openPopup();
+  }).addTo(map).bindPopup('MIKONOS: dias ').openPopup();
 
 
 
   // CRETA
 
   L.marker([35.338735, 25.144213]).addTo(map)
-    .bindPopup('CRETA : dia 24 <br> Retorno para Atenas dia 25')
+    .bindPopup('CRETA : dia ...')
     .openPopup();
 
 
